@@ -8,4 +8,4 @@ if __name__ == "__main__":
     agent = PPO(env.observation_space, env.action_space)
     agent.load_model("agents/ppo/trained_models/ppo.pth")
 
-    returns = evaluate(agent, env, 1, True)
+    returns = evaluate(agent, env, 100000, True, False, 0.05)

@@ -22,7 +22,7 @@ def make_env():
         return env
     return _make
 
-def evaluate(agent, env, n_episodes=5, render=False, record=False):
+def evaluate(agent, env, n_episodes=5, render=False, record=False, wait=0):
     total_rewards = []
 
     if record:
@@ -45,8 +45,8 @@ def evaluate(agent, env, n_episodes=5, render=False, record=False):
             total_reward += reward
             episode_length += 1
 
-            if render:
-                env.render()                
+            if render: env.render()
+            if wait: time.sleep(wait)                
                 
         total_rewards.append(total_reward)
         
