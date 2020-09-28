@@ -14,7 +14,7 @@ compiler=msvc
 * Install nvidia cuda 10.1
 * pip install torch==1.6.0+cu101 torchvision==0.7.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
 * pip install tensorflow-gpu nes_py gym_super_mario_bros
-* pip install gym-retro 
+* python setup.py install
 * python -m retro.examples.ppo --game Airstriker-Genesis
 * Go to roms location and run: python -m retro.import .
 * Install ffpmeg and add to windows path
@@ -23,4 +23,6 @@ compiler=msvc
 
 ## TODO 
 
+* Can't load the trained DQN models
+* Can't train with PPO
 * Convert to use gym-retro instead of nes_py
